@@ -1,6 +1,7 @@
 import Layout from '../components/Layout';
 import Dropdown from '../components/HeadlessUI/Dropdown';
 import Listbox from '../components/HeadlessUI/Listbox';
+import Disclosure from '../components/HeadlessUI/Disclosure';
 
 const temp = {
   dropdown: {
@@ -28,6 +29,15 @@ const temp = {
       { name: 'Tanya Fox' },
       { name: 'Hellen Schmidt' }
     ]
+  },
+  disclosure: {
+    items: [
+      {
+        label: 'What is your refund policy?',
+        desc: "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked."
+      },
+      { label: 'Do you offer technical support?', desc: 'No.' }
+    ]
   }
 };
 
@@ -49,7 +59,10 @@ function headlessui() {
             </div>
           </div>
           <div className="col h-full w-1/3 border-2 rounded-2xl p-3 m-2">
-            Third Element - Switch (Toggle)
+            Third Element - Disclosure
+            <div className="row">
+              <Disclosure {...temp.disclosure} />
+            </div>
           </div>
         </div>
       </div>
