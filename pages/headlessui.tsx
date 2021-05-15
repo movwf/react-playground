@@ -4,6 +4,7 @@ import Listbox from '../components/HeadlessUI/Listbox';
 import Disclosure from '../components/HeadlessUI/Disclosure';
 import Dialog from '../components/HeadlessUI/Dialog';
 import Popover from '../components/HeadlessUI/Popover';
+import RadioGroup from '../components/HeadlessUI/RadioGroup';
 
 const temp = {
   dropdown: {
@@ -79,41 +80,43 @@ function headlessui() {
     <Layout>
       <div className="flex flex-col h-full w-full border">
         <div className="row flex flex-row h-1/3">
-          <div className="col h-full w-1/3 border-2 rounded-2xl p-3 m-2 flex flex-col">
+          <div className="col h-full w-1/3 border-2 rounded-2xl p-3 m-2 flex flex-col bg-white">
             <span className="row">First Element - Dropdown Menu</span>
             <div className="row">
               <Dropdown {...temp.dropdown} />
             </div>
           </div>
-          <div className="col h-full w-1/3 border-2 rounded-2xl p-3 m-2 flex flex-col">
+          <div className="col h-full w-1/3 border-2 rounded-2xl p-3 m-2 flex flex-col bg-white">
             Second Element - Listbox
             <div className="row">
               <Listbox {...temp.listbox} />
             </div>
           </div>
-          <div className="col h-full w-1/3 border-2 rounded-2xl p-3 m-2">
+          <div className="col h-full w-1/3 border-2 rounded-2xl p-3 m-2 bg-white">
             Third Element - Disclosure
             <div className="row">
               <Disclosure {...temp.disclosure} />
             </div>
           </div>
         </div>
-        <div className="row flex flex-row h-1/3">
-          <div className="col h-full w-1/3 border-2 rounded-2xl p-3 m-2 flex flex-col">
+        <div className="row flex flex-row h-1/3 mt-3">
+          <div className="col h-full w-1/3 border-2 rounded-2xl p-3 m-2 flex flex-col bg-white">
             <span className="row">Forth Element - Dialog (Modal)</span>
             <div className="row">
               <Dialog {...temp.dialog} />
             </div>
           </div>
-          <div className="col h-full w-1/3 border-2 rounded-2xl p-3 m-2 flex flex-col">
+          <div className="col h-full w-1/3 border-2 rounded-2xl p-3 m-2 flex flex-col bg-white">
             Fifth Element - Popover
             <div className="row">
               <Popover {...temp.popover} />
             </div>
           </div>
-          <div className="col h-full w-1/3 border-2 rounded-2xl p-3 m-2">
-            Sixth Element - Radio Group
-            <div className="row">Test</div>
+          <div className="col h-full w-1/3 border-2 rounded-2xl p-3 m-2 bg-white">
+            Sixth Element - Radio Group - Buggy
+            <div className="row">
+              <RadioGroup />
+            </div>
           </div>
         </div>
       </div>
