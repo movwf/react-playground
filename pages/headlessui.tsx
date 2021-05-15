@@ -1,5 +1,6 @@
 import Layout from '../components/Layout';
 import Dropdown from '../components/HeadlessUI/Dropdown';
+import Listbox from '../components/HeadlessUI/Listbox';
 
 const temp = {
   dropdown: {
@@ -17,6 +18,16 @@ const temp = {
         icon: 'check'
       }
     ]
+  },
+  listbox: {
+    people: [
+      { name: 'Wade Cooper' },
+      { name: 'Arlene Mccoy' },
+      { name: 'Devon Webb' },
+      { name: 'Tom Cook' },
+      { name: 'Tanya Fox' },
+      { name: 'Hellen Schmidt' }
+    ]
   }
 };
 
@@ -31,8 +42,11 @@ function headlessui() {
               <Dropdown {...temp.dropdown} />
             </div>
           </div>
-          <div className="col h-full w-1/3 border-2 rounded-2xl p-3 m-2">
+          <div className="col h-full w-1/3 border-2 rounded-2xl p-3 m-2 flex flex-col">
             Second Element - Listbox
+            <div className="row">
+              <Listbox {...temp.listbox} />
+            </div>
           </div>
           <div className="col h-full w-1/3 border-2 rounded-2xl p-3 m-2">
             Third Element - Switch (Toggle)
