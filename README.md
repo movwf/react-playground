@@ -1,5 +1,7 @@
 # React Playground
 
+![React Playground](/static/images/react-playground.png)
+
 > For testing react features in use
 
 Has Examples
