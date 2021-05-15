@@ -2,6 +2,7 @@ import Layout from '../components/Layout';
 import Dropdown from '../components/HeadlessUI/Dropdown';
 import Listbox from '../components/HeadlessUI/Listbox';
 import Disclosure from '../components/HeadlessUI/Disclosure';
+import Dialog from '../components/HeadlessUI/Dialog';
 
 const temp = {
   dropdown: {
@@ -38,6 +39,15 @@ const temp = {
       },
       { label: 'Do you offer technical support?', desc: 'No.' }
     ]
+  },
+  dialog: {
+    buttonLabel: 'Open Modal',
+    buttonColor: 'bg-green-300',
+    modalTitle: 'Payment Successful',
+    modalDesc:
+      'Your payment has been successfully submitted. We’ve sent your an email with all of the details of your order.',
+    modalButtonTitle: 'Got it, thanks',
+    modalButtonColor: 'bg-blue-200'
   }
 };
 
@@ -63,6 +73,22 @@ function headlessui() {
             <div className="row">
               <Disclosure {...temp.disclosure} />
             </div>
+          </div>
+        </div>
+        <div className="row flex flex-row h-1/3">
+          <div className="col h-full w-1/3 border-2 rounded-2xl p-3 m-2 flex flex-col">
+            <span className="row">Forth Element - Dialog (Modal)</span>
+            <div className="row">
+              <Dialog {...temp.dialog} />
+            </div>
+          </div>
+          <div className="col h-full w-1/3 border-2 rounded-2xl p-3 m-2 flex flex-col">
+            Fifth Element - Popover
+            <div className="row">Test</div>
+          </div>
+          <div className="col h-full w-1/3 border-2 rounded-2xl p-3 m-2">
+            Sixth Element - Radio Group
+            <div className="row">Test</div>
           </div>
         </div>
       </div>
