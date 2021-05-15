@@ -10,7 +10,11 @@ export default function index(props: IDisclosure) {
     <div className="w-full pt-2">
       <div className="w-full max-w-md p-2 mx-auto bg-white rounded-2xl">
         {props.items?.map((item, idx) => (
-          <Disclosure as="div" className={`${idx !== 0 ? 'mt-2' : ''}`}>
+          <Disclosure
+            key={idx}
+            as="div"
+            className={`${idx !== 0 ? 'mt-2' : ''}`}
+          >
             {({ open }) => (
               <>
                 <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-medium text-left text-purple-900 bg-purple-100 rounded-lg hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">

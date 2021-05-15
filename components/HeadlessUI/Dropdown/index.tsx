@@ -36,8 +36,8 @@ function index(props: IDropDownButton) {
             className={`absolute ${props.menuOrientation}-0 w-56 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}
           >
             <div className="px-1 py-1 ">
-              {props.menuItems?.map(item => (
-                <MenuItem {...item} />
+              {props.menuItems?.map((item, idx) => (
+                <MenuItem key={idx} {...item} />
               ))}
             </div>
           </Menu.Items>

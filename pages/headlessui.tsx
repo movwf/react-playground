@@ -3,6 +3,7 @@ import Dropdown from '../components/HeadlessUI/Dropdown';
 import Listbox from '../components/HeadlessUI/Listbox';
 import Disclosure from '../components/HeadlessUI/Disclosure';
 import Dialog from '../components/HeadlessUI/Dialog';
+import Popover from '../components/HeadlessUI/Popover';
 
 const temp = {
   dropdown: {
@@ -48,6 +49,28 @@ const temp = {
       'Your payment has been successfully submitted. We’ve sent your an email with all of the details of your order.',
     modalButtonTitle: 'Got it, thanks',
     modalButtonColor: 'bg-blue-200'
+  },
+  popover: {
+    solutions: [
+      {
+        name: 'Insights',
+        description: 'Measure actions your users take',
+        href: '##',
+        icon: 'IconOne'
+      },
+      {
+        name: 'Automations',
+        description: 'Create your own targeted content',
+        href: '##',
+        icon: 'IconTwo'
+      },
+      {
+        name: 'Reports',
+        description: 'Keep track of your growth',
+        href: '##',
+        icon: 'IconThree'
+      }
+    ]
   }
 };
 
@@ -84,7 +107,9 @@ function headlessui() {
           </div>
           <div className="col h-full w-1/3 border-2 rounded-2xl p-3 m-2 flex flex-col">
             Fifth Element - Popover
-            <div className="row">Test</div>
+            <div className="row">
+              <Popover {...temp.popover} />
+            </div>
           </div>
           <div className="col h-full w-1/3 border-2 rounded-2xl p-3 m-2">
             Sixth Element - Radio Group
